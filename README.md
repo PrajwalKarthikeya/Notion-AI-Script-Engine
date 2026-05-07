@@ -3,7 +3,7 @@
 An automated pipeline for writers to transform raw scripts into relational Notion workspaces. 
 
 ## 🚀 The Mission
-As a writer for high-density narratives (like my 180-episode project, *Peace Break*), maintaining a lore bible is a manual chore. This engine uses **Local AI** to act as a creative assistant, extracting entities and building a connected world in Notion.
+As a writer for high-density narratives (like my 180-episode passion project epic, *Peace Break*), maintaining a lore bible is a manual chore. This engine uses **Local AI** to act as a creative assistant, extracting entities and building a connected world in Notion.
 
 ## 🛠️ Tech Stack
 - **AI:** Llama 3.1 8B (via LM Studio)
