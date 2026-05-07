@@ -1,15 +1,21 @@
+import os 
+from dotenv import load_dotenv
 import instructor
 from openai import OpenAI
 from pydantic import BaseModel, Field
 from typing import List
 from notion_client import Client
 
-# --- 1. CONFIGURATION ---
-NOTION_TOKEN = "ntn_A56648997424eU5Xs2JDX1dYWFXn5jJz4p3zUYl0WJN8Fk" 
-CHAR_DB_ID = "f64ee22b-e612-4531-942b-358a35559ecf" 
+   # --- 1. CONFIGURATION ---
+load_dotenv() # This secretly loads your .env file into memory
+
+   # Now Python pulls the token securely, without it being written here!
+NOTION_TOKEN = os.getenv("NOTION_TOKEN") 
+CHAR_DB_ID = "f64ee22b-e612-4531-942b-358a35559ecf" # DB IDs are safe to leave public
 LOC_DB_ID = "ad92bcdd-aae5-4c47-93a1-838b6b1b0830"  
 
 notion = Client(auth=NOTION_TOKEN)
+   # ... (the rest of your code stays exactly the same)
 
 # --- 2. THE SMARTER BRAIN SCHEMA ---
 class Character(BaseModel):
